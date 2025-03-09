@@ -1,5 +1,3 @@
-# Create main.py
-cat > main.py << 'EOF'
 from fastapi import FastAPI, Request, HTTPException
 from pydantic import BaseModel
 from typing import Dict, Any, Optional
@@ -62,6 +60,3 @@ async def webhook(request: WebhookRequest):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
-EOF
-
-echo "Created main.py"
